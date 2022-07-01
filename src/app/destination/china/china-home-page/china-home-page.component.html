@@ -1,0 +1,158 @@
+<!-- banner -->
+<app-banner [imgURL]="url" text="{{'china_home_banner' | translate}}"></app-banner>
+
+
+<!-- For Demo Purpose -->
+<div class="container py-5 text-center">
+    <h4>{{'home_plan_title' | translate}}</h4>
+    <div class="row">
+        <div class="col-sm-12 mb-5">
+            <p>{{'home_plan_content' | translate}}</p>
+            <button type="button mb-4" class="btn btn-warning">{{'home_btn_booking_condition' | translate}}</button>
+        </div>
+    </div>
+    <div class="hr-center">
+        <hr>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 class="display-4">{{'home_trips' | translate}}</h2>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-sm-12">
+            <h3>{{'home_Treat_yourself' | translate}}</h3>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-sm-12">
+            <p>{{'home_treat_content' | translate}}</p>
+        </div>
+    </div>
+    
+
+    <div class="hr-center">
+        <hr>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 class="display-4">{{'home_our_destination' | translate}}</h2>
+        </div>
+    </div>
+
+    <div class="row mt-3 ">
+        <div class="col-md-4 col-sm-12 pe-0">
+            <app-img-zoom
+                text="Các chuyến đi Trung Quốc độc quyền" 
+                URLTarget="round-trips"
+                [imgURL]="'https://www.china-reisen.de/media/_processed_/d/e/csm_china-exklusive-reisen_a9062df189.jpg'">
+            </app-img-zoom>
+        </div>
+
+        <div class="col-md-4 col-sm-12 pe-0">
+            <app-img-zoom
+            text="Các chuyến đi theo chủ đề"
+            URLTarget="round-trips"
+                [imgURL]="'https://www.china-reisen.de/media/_processed_/2/4/csm_china-reisen-themenreisen-header-0_bf088bc6a1.jpg'">
+            </app-img-zoom>
+        </div>
+
+        <div class="col-md-4 col-sm-12 pe-0">
+            <app-img-zoom
+            text="Các chuyến đi Trung Quốc độc quyền" 
+            URLTarget="round-trips"
+                [imgURL]="'https://www.china-reisen.de/media/_processed_/e/0/csm_tibet-reisen-yak-0_5b10619ca5.jpg'">
+            </app-img-zoom>
+        </div>
+    </div>
+    
+   
+
+
+    <div class="hr-center mt-5">
+        <hr>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 class="display-4">{{'home_pillars' | translate}}</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3 class="display-6">{{'home_roundtrip_best' | translate}}</h3>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <app-destination-img title="{{'home_img_specialism' | translate}}" content="{{'home_img_specialism_content' | translate}}" btncontent="{{'home_img_more' | translate}}" [imgURL]="'https://www.asien-special-tours.de/media/_Shared/Bilder/Marketingsaeulen/spezialistentum-asien-special-tours.jpg'"> </app-destination-img>
+    </div>
+
+    <div class="row mt-5">
+        <app-destination-img title="{{'home_img_personal_service' | translate}}" content="{{'home_img_personal_service_content' | translate}}" btncontent="{{'home_img_more' | translate}}" [imgURL]="'https://www.asien-special-tours.de/media/_Shared/Bilder/Marketingsaeulen/persoenlicher-service-asien-reisen-handschlag.jpg'"> </app-destination-img>
+    </div>
+
+    <div class="row mt-5">
+        <app-destination-img title="{{'home_img_tour_asean' | translate}}" content="{{'home_img_tour_asean_content' | translate}}" btncontent="{{'home_img_more' | translate}}" [imgURL]="'https://www.asien-special-tours.de/media/_processed_/f/2/csm_japan-reise-koi-fisch-massgeschneiderte-asien-reisen_5fd0e84b6d.jpg'"> </app-destination-img>
+    </div>
+
+    <div class="row mt-5">
+        <app-destination-img title="{{'home_img_tour_responsible' | translate}}" content="{{'home_img_tour_responsible_content' | translate}}" btncontent="{{'home_img_more' | translate}}" [imgURL]="'https://www.asien-special-tours.de/media/_Shared/Bilder/Marketingsaeulen/japan-reisen-arashiyama-bambuswald-kyoto.jpg'"> </app-destination-img>
+    </div>
+
+    <div class="row al-center mt-5">
+        <div class="col-sm-12">
+            <img class="avatar" src="https://www.china-reisen.de/media/_processed_/f/c/csm_Ruediger-Michael-Lutz_71f0f02825.jpg" alt="avatar">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <figure>
+                <blockquote class="blockquote">
+                    <p>{{'home_blockquote' | translate}}</p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    <cite title="Source Title">{{'home_blockquote_author' | translate}}</cite>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <h5 class="display-4">{{'home_asean_dream_trips' | translate}}</h5>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-sm-12">
+            <p>{{'home_asean_dream_trips_content1' | translate}}</p>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-sm-12">
+            <p>{{'home_asean_dream_trips_content2' | translate}}</p>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-sm-12">
+            <p>{{'home_asean_dream_trips_content3' | translate}}</p>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-sm-12">
+            <p>{{'home_asean_dream_trips_content4' | translate}}</p>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-sm-12">
+            <p>{{'home_asean_dream_trips_content5' | translate}}</p>
+        </div>
+    </div>
+
+    
+
+</div>
+<div class="container-fluid mt-5">
+    <app-support-banner></app-support-banner>
+</div>

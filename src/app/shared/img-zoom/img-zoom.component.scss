@@ -1,0 +1,69 @@
+.hover01 figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: 1.5s ease-in-out;
+	transition: 1.5s ease-in-out;
+}
+
+.hover01 figure:hover img {
+	-webkit-transform: scale(1.4);
+	transform: scale(1.4);
+}
+
+figure {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+	width: 90%;
+}
+
+.img-main {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+div.hover01.column.img-main:hover{
+	cursor: pointer;
+}
+
+
+
+// @media only screen and (min-width: 768px) {
+//     figure {
+//         width: 33.33%;
+//         height: 300px;
+//     }
+// }
+
+@media only screen and (min-width: 1440px){
+    span.centered{
+    font-size: 38px;
+    }
+}
+@media only screen and (min-width: 1220px) and (max-width: 1439px) {
+    span.centered{
+    font-size: 38px;
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1219px){
+    span.centered{
+    font-size: 34px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+    span.centered{
+    font-size: 24px;
+    }
+}

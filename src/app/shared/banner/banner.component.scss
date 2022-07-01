@@ -1,0 +1,19 @@
+.bg-cover {
+    background-size: cover !important;
+    background-position: center center !important;
+    height: 100vh;
+}
+.txt{
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    align-items: flex-end;
+    padding-bottom: 0 25px 70px;
+    font-size: 64px
+}
+@media only screen and (max-width: 767px){
+    .txt{
+    font-size: 30px;
+    }
+}
