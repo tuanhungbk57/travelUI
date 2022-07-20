@@ -1,9 +1,9 @@
-<div [ngStyle]="{'background': 'linear-gradient(0deg, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('+imgURL+')'}" class=" bg-cover text-white  py-5 destination-img">
+<div [ngStyle]="backgroundStyle" class=" bg-cover text-white  py-5 destination-img">
     <div class="container centered">
         <h3 class="display-4 font-weight-bold">{{title}}</h3>
-        <p class="font-italic mb-4 mt-4 w-75 mx-auto">{{content}}</p>
+        <p class="font-italic mb-4 mt-4 w-75 mx-auto txt">{{content}}</p>
         <p class="font-italic">
-            <button type="button mb-4" class="btn btn-secondary">{{btncontent}}</button>
+            <button type="button mb-4" class="btn btn-secondary txt">{{btncontent}}</button>
         </p>
         <!-- <a href="#" role="button" class="btn btn-primary px-5">See All Features</a> -->
     </div>

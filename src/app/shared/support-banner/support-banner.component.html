@@ -1,19 +1,19 @@
 <div class="text-center" style="background-color: black; color: white;">
     <div class="pt-5">
-        <img src="https://www.asien-special-tours.de/assets/images/logos/ast-gold.svgz?1511349000" alt="" srcset="">
+        <img src="{{logoLink}}" alt="" srcset="">
     </div>
-    <div class="mt-4 display-4">
-        {{'home_advise' | translate}}
+    <div class="mt-4 display-4 txt">
+        {{title}}
     </div>
     <div class="mt-4 mb-4">
-        <a href="tel:+{{tel}}">
-            <span style="font-size: 50px; color: #c49651;">
-                {{'footer_col1_phone_value' | translate}}
+        <a href="tel:+{{phone}}">
+            <span class="txt" style="font-size: 50px; color: #c49651;">
+                {{phone}}
             </span>
         </a>
     </div>
 
-    <div class="pb-5">
-        {{'home_time' | translate}}
+    <div class="pb-5 work-time">
+        {{worktime}}
     </div>
 </div>

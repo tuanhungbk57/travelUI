@@ -1,17 +1,55 @@
-<app-banner [imgURL]="url"></app-banner>
+<app-banner [imgURL]="des?.BannerImage" [text]="des?.Title"></app-banner>
 
 <!-- content -->
 <div class="container py-5 text-center">
-    <h2>tự thưởng cho mình một điều gì đó đặc biệt</h2>
+    <h2>{{des?.Quickview}}</h2>
 
     <div class="row">
         <div class="col-sm-12 mb-5">
-            <p>Khám phá thế giới với chúng tôi!</p>
-            <p>Không bao giờ ngừng khám phá. Trong hơn 25 năm, chúng tôi đã là chuyên gia của bạn cho các chuyến đi khứ hồi chất lượng cao và được thiết kế riêng ở Châu Á. Với hai công ty chị em của mình, Africa Royal Tours và América Special Tours, chúng tôi cũng mang đến cho bạn những trải nghiệm du lịch cá nhân và khó quên đến Châu Phi và Châu Mỹ Latinh. Chúng tôi đã thiết kế một trang web riêng cho từng điểm đến du lịch để cung cấp cho bạn nhiều sáng tạo du lịch, ý tưởng và thông tin du lịch nhất có thể. Chúng tôi cũng điều hành một blog du lịch riêng cho mỗi quốc gia. Một hướng dẫn viên cá nhân, tài xế riêng và các nhà nghỉ và chỗ ở sang trọng đang chờ đón bạn. Khám phá những nơi nghỉ dưỡng độc đáo trong chuyến đi mơ ước của bạn và chinh phục những chân trời mới.</p>
+            <p>{{des?.QuickviewContent}}</p>
         </div>
     </div>
 
-    <div class="row mt-3 ">
+    <div class="hr-center">
+        <hr>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 class="display-4">{{des?.IndividualTripTitle}}</h2>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-sm-12">
+            <h3>{{des?.IndividualTripAdditional}}</h3>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-sm-12">
+            <p>{{des?.IndividualTripContent}}</p>
+        </div>
+    </div>
+    
+
+    <div class="hr-center">
+        <hr>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 class="display-4">{{des?.TripTitle}}</h2>
+        </div>
+    </div>
+
+    <div class="row mt-3" *ngFor="let arr of trips">
+        <div class="col-md-4 col-sm-12 pe-0" *ngFor="let subdest of arr">
+            <app-img-zoom text="{{subdest.TripDetailName}}" [URLTarget]="subdest.TripURL"
+            [imgURL]="subdest.ImageURL">
+        </app-img-zoom>
+        </div>
+    </div>
+
+    <!-- <div class="row mt-3 ">
         <div class="col-md-4 col-sm-12 pe-0">
             <app-img-box text="Oman" textTarget="Đến các chuyến đi"
                 [imgURL]="'https://www.asien-special-tours.de/media/_processed_/a/8/csm_oman-reisen-grosse-mosche-muscat_8b5b3a3e2f.jpg'"
@@ -55,9 +93,9 @@
             [URLTarget]="'https://www.china-reisen.de/'">
         </app-img-box>
         </div>
-    </div>
+    </div> -->
 
 </div>
-<div class="container-fluid mt-5">
+<!-- <div class="container-fluid mt-5">
     <app-support-banner></app-support-banner>
-</div>
+</div> -->

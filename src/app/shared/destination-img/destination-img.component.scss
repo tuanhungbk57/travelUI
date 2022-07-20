@@ -18,6 +18,25 @@
      height: 450px;
     }
 }
+@media  screen and (max-width: 768px){
+    .destination-img
+    {
+     height: 450px;
+    }
+    .txt{
+        font-size: 18px !important;
+    }
+    .w-75 {
+        width: 100% !important;
+    }
+    .centered {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    h3{
+        font-size: 24px !important;
+    }
+}
 .destination-img{
     position: relative;
 	text-align: center;
@@ -43,3 +62,6 @@
 	transform: translate(-50%, -50%);
 }
 
+p {
+    padding: 0 0 25px 0;
+}

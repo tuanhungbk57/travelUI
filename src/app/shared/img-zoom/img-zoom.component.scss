@@ -48,22 +48,34 @@ div.hover01.column.img-main:hover{
 // }
 
 @media only screen and (min-width: 1440px){
-    span.centered{
+    .centered{
     font-size: 38px;
     }
 }
 @media only screen and (min-width: 1220px) and (max-width: 1439px) {
-    span.centered{
+    .centered{
     font-size: 38px;
     }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1219px){
-    span.centered{
+    .centered{
     font-size: 34px;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1023px){
-    span.centered{
-    font-size: 24px;
+    .centered{
+    font-size: 24px !important;
     }
+}
+
+@media  screen and (max-width: 768px){
+    .img-main{
+		margin-top: 15px;
+	}
+}
+
+img{
+	max-height: 347px;
+    width: 100%;
+    max-width: 523px;
 }

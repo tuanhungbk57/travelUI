@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DestinationInfoComponent } from './destination-info/destination-info.component';
 import { DestinationPageComponent } from './destination-page/destination-page.component';
+import { TourComponent } from './tour/tour.component';
+import { TripComponent } from './trip/trip.component';
 
 const routes: Routes = [
   {
@@ -8,14 +11,13 @@ const routes: Routes = [
     component: DestinationPageComponent
   },
   {
-    path: 'china',
-    loadChildren: () => import('./china/china.module').then(m => m.ChinaModule)
+    path: ':path',
+    component: TripComponent
   },
   {
-    path: 'vietnamese',
-    loadChildren: () => import('./vietnamese/vietnamese.module').then(m => m.VietnamesModule)
+    path: ':path/:rout',
+    component: TourComponent
   }
-
 ];
 
 @NgModule({

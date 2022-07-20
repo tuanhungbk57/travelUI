@@ -1,3 +1,13 @@
 a, u {
     text-decoration: none;
   }
+
+  @media  screen and (max-width: 768px){
+    .txt{
+      font-size: 30px;
+    }
+    .work-time{
+      font-size: 18px;
+      
+    }
+	}

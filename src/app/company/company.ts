@@ -1,0 +1,31 @@
+export class Company {
+    Ceo!: string;
+    Address!: string;
+    Phone!: string;
+    Fax!: string;
+    Email!: string;
+    CompanyName!: string;
+    Logo!: string;
+    Lang!: string;
+    CeoAvatar!: string;
+    BlockQuote!: string;
+    Position!: string;
+    Specialism!: string;
+    SpecialismImage!: string;
+    SpecialismContent!: string;
+    PersonalService!: string;
+    PersonalServiceImage!: string;
+    PersonalServiceContent!: string;
+    CustomizeTour!: string;
+    CustomizeTourImage!: string;
+    CustomizeTourContent!: string;
+    ResponsibleTravel!: string;
+    ResponsibleTravelImage!: string;
+    ResponsibleTravelContent!: string;
+    ContactMe!: string;
+    WorkTime!: string;
+    NewsletterContent!: string;
+    MoreInfo!: string;
+    EndTitle!: string;
+    EndContent!: string;
+}
