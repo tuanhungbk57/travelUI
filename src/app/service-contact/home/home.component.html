@@ -1,70 +1,61 @@
 <!-- banner -->
-<app-banner [imgURL]="'https://www.asien-special-tours.de/media/_processed_/7/c/csm_service-und-kontakt-asien-special-tours-h_31eea04155.jpg?v=1520593829'" 
-text="{{'menu_contact' | translate}}"></app-banner>
+<app-banner [imgURL]="sc?.BannerImage" text="{{sc?.Title}}"></app-banner>
 
 
 <div class="container py-5 text-center">
     <div class="row">
         <div class="col-sm-12">
-            <h2 class="display-4">{{'menu_contact' | translate}}</h2>
+            <h2 class="display-4">{{sc?.Title}}</h2>
         </div>
     </div>
     <div class="row mt-4">
         <div class="col-sm-12">
-            <p>{{'ser_con_content' | translate}}</p>
+            <p>{{sc?.Content}}</p>
         </div>
     </div>
 
     <div class="row mt-3 ">
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom
-                text="{{'ser_con_discussion' | translate}}" 
-                URLTarget=""
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/d/e/csm_anfrage-an-asien-special-tours_1d14094125.jpg'">
+        <!-- đặt chỗ communications-->
+        <div class="col-md-4 col-sm-12 pe-0" *ngIf="sc?.CommunicationTitle">
+            <app-img-zoom text="{{sc?.CommunicationTitle}}" URLTarget="communication"
+                [imgURL]="sc?.CommunicationImage">
+            </app-img-zoom>
+        </div>
+        <!-- bản tin -->
+        <div class="col-md-4 col-sm-12 pe-0" *ngIf="sc?.NewsLetterTitle">
+            <app-img-zoom text="{{sc?.NewsLetterTitle}}" URLTarget="newsletters"
+                [imgURL]="sc?.NewsLetterImage">
+            </app-img-zoom>
+        </div>
+        <!-- người liên hệ -->
+        <div class="col-md-4 col-sm-12 pe-0" *ngIf="sc?.OurTeamTitle">
+            <app-img-zoom text="{{sc?.OurTeamTitle}}" URLTarget="our-team"
+                [imgURL]="sc?.QuestionImage">
             </app-img-zoom>
         </div>
 
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom
-            text="{{'ser_con_contact' | translate}}" 
-            URLTarget=""
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/8/e/csm_ansprechpartner_-asien-special-tours_83eb05d2ce.jpg'">
-            </app-img-zoom>
-        </div>
-
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom
-            text="{{'ser_con_business_hours' | translate}}"  
-            URLTarget=""
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/f/1/csm_kontakt-oeffnungszeiten-asien-special-tours_1847a1142c.jpg'">
-            </app-img-zoom>
-        </div>
+       
     </div>
-
+    <!-- dịch vụ visa du lịch -->
     <div class="row mt-3 ">
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom
-                text="{{'ser_con_visa' | translate}}" 
-                URLTarget=""
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/a/b/csm_reisevisa-service-asien-special-tours_d4f6d37170.jpg'">
+         <!-- Chi tiết liên hệ và thời gian mở cửa -->
+         <div class="col-md-4 col-sm-12 pe-0" *ngIf="sc?.worktimeTitle">
+            <app-img-zoom text="{{sc?.worktimeTitle}}" URLTarget="worktime"
+                [imgURL]="sc?.worktimeImage">
+            </app-img-zoom>
+        </div>
+        <div class="col-md-4 col-sm-12 pe-0" *ngIf="sc?.visaTitle">
+            <app-img-zoom text="{{sc?.visaTitle}}" URLTarget="visa"
+                [imgURL]="sc?.visaImage">
+            </app-img-zoom>
+        </div>
+        <!-- câu hỏi thường gặp -->
+        <div class="col-md-4 col-sm-12 pe-0" *ngIf="sc?.questionTitle">
+            <app-img-zoom text="{{sc?.questionTitle}}" URLTarget="question"
+                [imgURL]="sc?.questionImage">
             </app-img-zoom>
         </div>
 
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom
-            text="{{'ser_con_order_template' | translate}}" 
-            URLTarget=""
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/b/3/csm_bestellformular-katalog-kundenmagazin_c90c1f12b5.jpg'">
-            </app-img-zoom>
-        </div>
-
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom
-            text="{{'ser_con_frequently_asked' | translate}}"  
-            URLTarget=""
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/f/8/csm_hauefige_fragen_und_antworten-asien_special_tours_60a0f785ee.jpg'">
-            </app-img-zoom>
-        </div>
     </div>
 
 </div>

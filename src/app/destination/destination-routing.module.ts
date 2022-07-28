@@ -8,14 +8,18 @@ import { TripComponent } from './trip/trip.component';
 const routes: Routes = [
   {
     path: '',
+    component: DestinationInfoComponent
+  },
+  {
+    path: ':destpath',
     component: DestinationPageComponent
   },
   {
-    path: ':path',
+    path: ':destpath/:trippath',
     component: TripComponent
   },
   {
-    path: ':path/:rout',
+    path: ':destpath/:trippath/:tourpath',
     component: TourComponent
   }
 ];

@@ -20,8 +20,8 @@ export class TourService extends BaseService {
    * @returns {Observable<any>}
    * @memberof DestinationService
    */
-   getList(): Observable<any> {
-    return this.http.get(`${this.url}/${this.lang}/lang`);
+   getList(trip: string): Observable<any> {
+    return this.http.get(`${this.url}/${trip}/trip/${this.lang}/lang`);
   }
 
   getByPath(path: string): Observable<any> {

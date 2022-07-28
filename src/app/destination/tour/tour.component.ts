@@ -16,7 +16,7 @@ export class TourComponent implements OnInit {
   constructor(private route: ActivatedRoute, public tourService: TourService) { }
 
   ngOnInit(): void {
-    this.path = this.route.snapshot.params['rout'];
+    this.path = this.route.snapshot.params['tourpath'];
     this.getDetail();
   }
 

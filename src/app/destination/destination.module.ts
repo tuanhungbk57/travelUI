@@ -10,6 +10,7 @@ import { TripComponent } from './trip/trip.component';
 import { TourComponent } from './tour/tour.component';
 import { TripService } from '../service/trip.service';
 import { TourService } from '../service/tour.service';
+import { DestinationInfoService } from '../service/destination-info.service';
 
 
 /**
@@ -30,6 +31,6 @@ import { TourService } from '../service/tour.service';
     DestinationRoutingModule,
     SharedModule
   ],
-  providers:[DestinationService, TripService, TourService]
+  providers:[DestinationService, TripService, TourService, DestinationInfoService]
 })
 export class DestinationModule { }

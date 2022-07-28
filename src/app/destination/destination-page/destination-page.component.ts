@@ -31,7 +31,7 @@ export class DestinationPageComponent implements OnInit {
 
   constructor(public translate: TranslateService, public destinationService: DestinationService, private route: ActivatedRoute, public tripService: TripService) { }
   ngOnInit(): void {
-    this.path = this.route.snapshot.params['path'];
+    this.path = this.route.snapshot.params['destpath'];
     this.getDetail();
     this.getTripList();
   }
@@ -54,7 +54,7 @@ export class DestinationPageComponent implements OnInit {
    * @memberof DestinationPageComponent
    */
   getTripList(){
-    this.tripService.getList().subscribe((data: any)=>{
+    this.tripService.getList(this.path).subscribe((data: any)=>{
       this.trips = this.tripService.splitArrayIntoChunks(data, 3);
     })
   }

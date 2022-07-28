@@ -1,0 +1,40 @@
+<app-banner [imgURL]="com?.BannerImage" text="{{com?.Title}}"></app-banner>
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 class="display-4">{{com?.Title}}</h2>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-sm-12">
+            <p>{{com?.Content}}</p>
+        </div>
+    </div>
+
+   <form action="#" [ngClass]="{'was-validated': isInvalid}">
+    <div class="row mt-3">
+        <div class="col-md-4  col-sm-12">
+            <label for="fullName">Họ tên</label>
+            <input type="text"  class="form-control" id="fullName" [(ngModel)]="contact.fullName" placeholder="Nhập họ tên" name="fullName">
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <label for="email">Email<sup class="require">*</sup></label>
+            <input type="email" class="form-control" id="email" [(ngModel)]="contact.email" placeholder="Nhập email" name="email" required>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <label for="phone">Số điện thoại</label>
+            <input type="phone" class="form-control" id="phone" [(ngModel)]="contact.phone" placeholder="Nhập số điện thoại" name="phone">
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <label for="contactRequest">Bạn có lưu ý gì cho chúng tôi?</label>
+            <textarea class="form-control" rows="5" [(ngModel)]="contact.contactRequest" id="comment" name="contactRequest"></textarea>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <button type="button" (click)="submit()" class="btn btn-success">Gửi yêu cầu</button>
+    </div>
+   </form>
+</div>

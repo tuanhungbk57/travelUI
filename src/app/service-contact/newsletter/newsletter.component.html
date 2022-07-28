@@ -1,0 +1,30 @@
+<app-banner [imgURL]="news?.BannerImage" text="{{news?.RegisterTitle}}"></app-banner>
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 class="display-4">{{news?.RegisterTitle}}</h2>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-sm-12">
+            <p>{{news?.RegisterContent}}</p>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-6 col-sm-12">
+            <label for="fullName">Họ tên</label>
+            <input type="text" class="form-control" id="fullName" [(ngModel)]="contact.fullName" placeholder="Nhập họ tên" name="fullName">
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" [(ngModel)]="contact.email" placeholder="Nhập email" name="email">
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-6 col-sm-12">
+            <button type="button" (click)="subscribe()" class="btn btn-success">Gửi yêu cầu</button>
+        </div>
+    </div>
+</div>

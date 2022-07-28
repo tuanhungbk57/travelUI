@@ -15,13 +15,13 @@ export class TripService extends BaseService {
   }
 
   /**
-   * Lấy về danh sách các điểm đến
+   * Lấy về danh sách các chuyến đi theo điểm đến
    *
    * @returns {Observable<any>}
    * @memberof DestinationService
    */
-   getList(): Observable<any> {
-    return this.http.get(`${this.url}/${this.lang}/lang`);
+   getList(des: string): Observable<any> {
+    return this.http.get(`${this.url}/${des}/des/${this.lang}/lang`);
   }
 
   getByPath(path: string): Observable<any> {

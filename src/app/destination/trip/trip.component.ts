@@ -16,8 +16,8 @@ export class TripComponent implements OnInit {
   constructor(private route: ActivatedRoute,public tripService: TripService, public tourService: TourService) { }
 
   ngOnInit(): void {
-    this.path = this.route.snapshot.params['path'];
-    this.getDestList();
+    this.path = this.route.snapshot.params['trippath'];
+    this.getTourList();
     this.getDetail();
   }
 
@@ -37,8 +37,8 @@ export class TripComponent implements OnInit {
    *
    * @memberof TripComponent
    */
-  getDestList(){
-    this.tourService.getList().subscribe((data: any)=>{
+  getTourList(){
+    this.tourService.getList(this.path).subscribe((data: any)=>{
       this.tours = this.tourService.splitArrayIntoChunks(data, 3);
     })
   }

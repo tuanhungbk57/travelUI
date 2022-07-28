@@ -5,10 +5,10 @@
         <i class="bi bi-x-lg fa-2x" (click)="toggleSidebar(!sidebarservice.toggled)" style="cursor: pointer; color: rgb(240, 146, 23);"></i>
       </div>
 
-      <div class="sidebar-menu">
+      <div class="sidebar-menu text-center">
         <ul>
-          <li [ngClass]="{'active': true}">
-            <a href="/" (click)='toggle("x")'>
+          <li [ngClass]="{'active': true}" (click)="toggleSidebar(!sidebarservice.toggled)">
+            <a routerLink="/" (click)='toggle("x")'>
               <!-- <i class="{{menu.icon}}"></i> -->
               <span>{{'menu_item1' | translate}}</span>
               <!-- <span *ngIf="menu.badge" class="badge badge-pill" [ngClass]="menu.badge.class">{{menu.badge.text}}</span> -->
@@ -23,24 +23,24 @@
               </ul>
             </div> -->
           </li>
-
-          <li [ngClass]="{'active': true}">
-            <a href="/destinations" (click)='toggle("x")'>
+          <hr>
+          <li [ngClass]="{'active': true}" (click)="toggleSidebar(!sidebarservice.toggled)">
+            <a [routerLink]="['/destination']" (click)='toggle("x")'>
               <span>{{'menu_item2' | translate}}</span>
             </a>
           </li>
-
-          <li [ngClass]="{'active': true}">
-            <a href="/services" (click)='toggle("x")'>
+          <hr>
+          <li [ngClass]="{'active': true}" (click)="toggleSidebar(!sidebarservice.toggled)">
+            <a [routerLink]="['/service-contact']" (click)='toggle("x")'>
               <span>{{'menu_contact' | translate}}</span>
             </a>
           </li>
-
-          <li [ngClass]="{'active': true}">
+          <hr>
+          <!-- <li [ngClass]="{'active': true}">
             <a href="/services" (click)='toggle("x")'>
               <span>{{'menu_contact' | translate}}</span>
             </a>
-          </li>
+          </li> -->
 
 
         </ul>

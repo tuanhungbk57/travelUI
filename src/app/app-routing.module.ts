@@ -3,16 +3,20 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path:'service-contact',
+    loadChildren:() =>import('./service-contact/service-contact.module').then(m =>m.ServiceContactModule)
+  },
+  {
+    path:'blog',
+    loadChildren:() =>import('./service-contact/service-contact.module').then(m =>m.ServiceContactModule)
+  },
+  {
     path: '',
     loadChildren: () => import('./homepage/homepage.module').then(m => m.HomepageModule)
   },
   {
-    path:':path',
+    path:'destination',
     loadChildren:() =>import('./destination/destination.module').then(m =>m.DestinationModule)
-  },
-  {
-    path:'service-contact',
-    loadChildren:() =>import('./service-contact/service-contact.module').then(m =>m.ServiceContactModule)
   }
 ];
 

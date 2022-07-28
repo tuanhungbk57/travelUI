@@ -28,9 +28,9 @@ import { TranslateCacheModule, TranslateCacheSettings, TranslateCacheService } f
 })
 export class I18nModule {
   constructor(translate: TranslateService, translateCacheService: TranslateCacheService) {
-    translate.addLangs(['en', 'ru']);
-    const browserLang: string = translateCacheService.getCachedLanguage() || translate.getBrowserLang() || "en";
-    translate.use(browserLang.match(/en|vi/) ? browserLang : 'en');
+    translate.addLangs(["en", "vi", "de", "chin", "ko", "ja"]);
+    const browserLang: string = localStorage.getItem("lang") || translateCacheService.getCachedLanguage() || translate.getBrowserLang() || "en";
+    translate.use(browserLang.match(/en|vi|de|chin|ko|ja/) ? browserLang : 'en');
   }
 }
 

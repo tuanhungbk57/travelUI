@@ -19,6 +19,7 @@ h5 {
 hr {
   width: 200px;
   color: $main-color;
+  margin: auto;
 }
 
 .container-fluid {
@@ -75,4 +76,8 @@ body {
   border-radius: 0px !important;
   opacity: .5;
 
+}
+
+sup.require{
+  color: red;
 }
