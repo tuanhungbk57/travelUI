@@ -118,7 +118,12 @@
             "outputPath": "dist/NTH.Travel/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
-            "inlineStyleLanguage": "scss"
+            "inlineStyleLanguage": "scss",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/scss"
+              ]
+            }
           },
           "configurations": {
             "production": {

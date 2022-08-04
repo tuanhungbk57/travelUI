@@ -11,9 +11,7 @@ export class BaseService {
   constructor(public http: HttpClient) { }
 
   getCurrentLang(): string{
-    const lang = localStorage.getItem('lang');
-    const langObj = nth.langs[0];
-    return lang || langObj;
+    return nth.getCurrentLanguage();
   }
 
   /**

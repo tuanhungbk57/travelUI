@@ -14,7 +14,7 @@ export class Homepage {
     btnRegister!: string;
     exclusiveOfferTitle!: string;
     videoTitle!: string;
-    videoScript!: string;
+    videoScript!: any;
     pillarTravel!: string;
     pilarTravelAdditional!: string;
     status!: string;

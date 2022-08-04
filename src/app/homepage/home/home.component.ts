@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 import { Company } from 'src/app/company/company';
 import { Destination } from 'src/app/destination/model/destination';
@@ -15,7 +16,7 @@ import { Homepage } from '../model/homepage';
 export class HomeComponent implements OnInit {
 
   constructor(public translate: TranslateService, public companyService: CompanyService, 
-    public homeService: HomepageService, public destinationService: DestinationService) { }
+    public homeService: HomepageService, public destinationService: DestinationService, private sanitizer: DomSanitizer) { }
   home: Homepage = new Homepage();
   company: Company = new Company();
   dests: any[] = [];
@@ -30,6 +31,7 @@ export class HomeComponent implements OnInit {
   getHomeInfo(){
     this.homeService.getInfo().subscribe((data: any) =>{
       this.home = data;
+      this.home.videoScript = this.sanitizer.bypassSecurityTrustHtml(this.home.videoScript);
     })
   }
 

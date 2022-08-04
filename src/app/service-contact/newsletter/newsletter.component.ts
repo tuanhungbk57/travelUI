@@ -16,6 +16,7 @@ import { ContactService } from '../service/contact.service';
   styleUrls: ['./newsletter.component.scss']
 })
 export class NewsletterComponent implements OnInit {
+  isInvalid = false;
 
   news: any;
   contact: Contact = new Contact;
@@ -30,9 +31,15 @@ export class NewsletterComponent implements OnInit {
     })
   }
   subscribe(){
+    if(this.contactService.validate(this.contact)){
+
     this.contactService.subscribe(this.contact).subscribe((data: any)=>{
       console.log(data);
       this.contact = new Contact();
+      this.isInvalid = false;
     })
+  }else{
+    this.isInvalid = true;
+  }
   }
 }

@@ -132,7 +132,9 @@
     <div class="row mt-5 mb-5">
         <div class="col-sm-12">
             <h4 class="display-4">{{home.newsletterContent}}</h4>
-            <button type="button mb-4" class="btn btn-warning">{{home.btnRegister}}</button>
+            <button type="button mb-4" class="btn btn-warning"><a [routerLink]="['/service-contact/newsletters']"  >
+                {{home.btnRegister}}
+            </a></button>
 
         </div>
     </div>
@@ -215,6 +217,18 @@
             <h2 class="display-4">{{'home_something_special' | translate}}</h2>
         </div>
     </div> -->
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 class="display-4">{{home.videoTitle}}</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-12">
+            <div [innerHTML]="home.videoScript" ></div>
+        </div>
+    </div>
 
     <div class="hr-center mt-5">
         <hr>
