@@ -60,3 +60,31 @@
   padding: 3px 10px
 }
 
+.contact-button {
+  position: fixed;
+  bottom: 50%;
+  right: 10px;
+  width: 70px;
+  height: 70px;
+  z-index: 9010;
+  background: url(/assets/images/icons/icon-contact-button-white.svgz) no-repeat center center #c49651;
+  background-size: 65%;
+}
+
+@media (min-width: 1220px) {
+  .contact-button {
+    -webkit-transition: opacity .5s ease;
+    -moz-transition: opacity .5s ease;
+    -o-transition: opacity .5s ease;
+    transition: opacity .5s ease;
+    bottom: 50%;
+    right: 30px;
+    opacity: .7;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .contact-button {
+    opacity: 1;
+  }
+}

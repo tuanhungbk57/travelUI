@@ -12,6 +12,7 @@ export function setCurrentLanguage(lang: string){
 export function getCurrentLanguage(): any{
     let lang = localStorage.getItem("lang");
     if(lang) {
+        setCurrentLanguage(lang);
         return lang;
     }
     return "vi";

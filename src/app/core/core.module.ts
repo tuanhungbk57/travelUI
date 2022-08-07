@@ -9,20 +9,14 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from '../shared/shared.module';
 
-const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
-  suppressScrollX: true
-};
 
 @NgModule({
     
     declarations: [SidenavComponent],
   imports: [
-    CommonModule,PerfectScrollbarModule, RouterModule,BrowserAnimationsModule, SharedModule
+    CommonModule, RouterModule,BrowserAnimationsModule, SharedModule
   ],
-  providers:[SidenavService,{
-    provide: PERFECT_SCROLLBAR_CONFIG,
-    useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
-  }],
+  providers:[SidenavService],
   exports:[SidenavComponent]
 })
 export class CoreModule { }
