@@ -1,4 +1,4 @@
-<div [ngStyle]="backgroundStyle" class=" bg-cover text-white  py-5 destination-img">
+<div *ngIf="_apiResponse" [ngStyle]="backgroundStyle" class=" bg-cover text-white  py-5 destination-img">
     <div class="container centered">
         <h3 class="display-4 font-weight-bold">{{title}}</h3>
         <p class="font-italic mb-4 mt-4 w-75 mx-auto txt">{{content}}</p>

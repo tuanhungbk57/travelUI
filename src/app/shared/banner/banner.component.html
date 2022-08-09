@@ -1,4 +1,4 @@
-<div [ngStyle]="backgroundStyle"  class="jumbotron bg-cover text-white ">
+<div *ngIf="_apiResponse" [ngStyle]="backgroundStyle"  class="jumbotron bg-cover text-white ">
     <div class="container py-5 mb-2 txt">
 
         <div class="row">

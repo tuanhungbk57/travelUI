@@ -26,7 +26,6 @@ export class HomeComponent implements OnInit {
     this.getCompanyInfo();
     this.getDestList();
   }
-  url = 'https://www.asien-special-tours.de/media/_processed_/3/6/csm_mynamar-reise-moenche_60f3add896.jpg';
 
   getHomeInfo(){
     this.homeService.getInfo().subscribe((data: any) =>{

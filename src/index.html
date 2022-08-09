@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Global Prestige</title>
-  <base href="/">
+  <base href="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,6 +26,9 @@
   s1.setAttribute('crossorigin','*');
   s0.parentNode.insertBefore(s1,s0);
   })();
+  window.Tawk_API.onPrechatSubmit = function(data){
+    console.log("hhh ", data);
+};
   </script>
   <!--End of Tawk.to Script-->
 </html>

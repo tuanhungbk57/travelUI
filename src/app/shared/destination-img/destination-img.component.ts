@@ -21,7 +21,7 @@ export class DestinationImgComponent implements OnInit {
     
     // do whatever else you want to do here
   }
-  private _apiResponse: string = "";
+   _apiResponse: string = "";
   backgroundStyle = {'background': `linear-gradient(0deg, rgba(0,0,0,.6), rgba(0,0,0,.6)), url('${this._apiResponse}')`};
 
   @Input() content = '';

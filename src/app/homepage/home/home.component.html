@@ -14,6 +14,8 @@
     <div class="hr-center">
         <hr>
     </div> -->
+
+
     <div class="row">
         <div class="col-sm-12">
             <h2 class="display-4">{{home.individualTripTitle}}</h2>
@@ -66,75 +68,18 @@
     <div class="row mt-3" *ngFor="let arr of dests">
         <div class="col-md-4 col-sm-12 pe-0" *ngFor="let subdest of arr">
             <app-img-zoom text="{{subdest.DestinationName}}" URLTarget="destination/{{subdest.DestinationURL}}"
-            [imgURL]="subdest.ImageURL">
-        </app-img-zoom>
-        </div>
-    </div>
-
-    <!-- <div class="row mt-3 ">
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom text="{{'Bhutan_key' | translate}}"
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/b/a/csm_bhutan-reise-tigers-nest-16_12098859f9.jpg'">
-            </app-img-zoom>
-        </div>
-
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom text="{{'China' | translate}}"
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/f/1/csm_China---Grosse-Mauer---Asien-Special-Tours_6f78de09d2.jpg'">
-            </app-img-zoom>
-        </div>
-
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom text="{{'India' | translate}}"
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/7/4/csm_taj-mahal-400068991_fe4b39239f.jpg'">
+                [imgURL]="subdest.ImageURL">
             </app-img-zoom>
         </div>
     </div>
-    <div class="row mt-3 ">
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/0/c/csm_eine-million-euro-reise-segelyacht_f767c1856d.jpg'">
-            </app-img-zoom>
-        </div>
 
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/0/c/csm_eine-million-euro-reise-segelyacht_f767c1856d.jpg'">
-            </app-img-zoom>
-        </div>
-
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/0/c/csm_eine-million-euro-reise-segelyacht_f767c1856d.jpg'">
-            </app-img-zoom>
-        </div>
-    </div>
-    <div class="row mt-3 ">
-        <div class="col-md-4 col-sm-12 pe-0 ">
-            <app-img-zoom
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/0/c/csm_eine-million-euro-reise-segelyacht_f767c1856d.jpg'">
-            </app-img-zoom>
-        </div>
-
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/0/c/csm_eine-million-euro-reise-segelyacht_f767c1856d.jpg'">
-            </app-img-zoom>
-        </div>
-
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/0/c/csm_eine-million-euro-reise-segelyacht_f767c1856d.jpg'">
-            </app-img-zoom>
-        </div>
-    </div> -->
 
     <div class="row mt-5 mb-5">
         <div class="col-sm-12">
-            <h4 class="display-4">{{home.newsletterContent}}</h4>
-            <button type="button mb-4" class="btn btn-warning"><a [routerLink]="['/service-contact/newsletters']"  >
-                {{home.btnRegister}}
-            </a></button>
+            <h4 class="display-6">{{home.newsletterContent}}</h4>
+            <button type="button mb-4" class="btn btn-warning"><a style="text-decoration:none;" [routerLink]="['/service-contact/newsletters']">
+                    {{home.btnRegister}}
+                </a></button>
 
         </div>
     </div>
@@ -149,87 +94,20 @@
         </div>
     </div>
 
-    <!-- <div class="row mt-3 ">
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom text="{{'home_img_honeymoon' | translate}}"
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/1/a/csm_hochzeitsreise-honeymoon-flitterwochen-14_f8a938d64c.jpg'">
-            </app-img-zoom>
-        </div>
 
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom text="{{'home_img_1MEuro' | translate}}"
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/0/c/csm_eine-million-euro-reise-segelyacht_f767c1856d.jpg'">
-            </app-img-zoom>
-        </div>
-
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom text="{{'home_img_sea' | translate}}"
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/d/6/csm_luxuskreuzfahrten-indonesien-aman-cruises-amandira_93cd01b0bf.jpg'">
-            </app-img-zoom>
-        </div>
-    </div>
-    <div class="row mt-3">
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-box text="{{'home_img_body' | translate}}"
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/6/4/csm_asien-luxusreisen-body-soul_64f7d1cdd3.jpg'">
-            </app-img-box>
-        </div>
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-box text="{{'home_img_body' | translate}}"
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/6/4/csm_asien-luxusreisen-body-soul_64f7d1cdd3.jpg'">
-            </app-img-box>
-        </div>
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-box text="{{'home_img_body' | translate}}"
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/6/4/csm_asien-luxusreisen-body-soul_64f7d1cdd3.jpg'">
-            </app-img-box>
-        </div>
-    </div>
-    <div class="row mt-2 ">
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom text="{{'home_img_jet' | translate}}"
-                [imgURL]="'https://i1-dulich.vnecdn.net/2021/07/16/1-1626437591.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=BWzFqMmUWVFC1OfpPSUqMA'">
-            </app-img-zoom>
-        </div>
-
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom text="{{'home_img_style' | translate}}"
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/0/4/csm_asien-luxusreisen-bali-indonesien-in-style_a18fb9aaca.jpg'">
-            </app-img-zoom>
-        </div>
-
-        <div class="col-md-4 col-sm-12 pe-0">
-            <app-img-zoom text="{{'home_img_body' | translate}}"
-                [imgURL]="'https://www.asien-special-tours.de/media/_processed_/6/4/csm_asien-luxusreisen-body-soul_64f7d1cdd3.jpg'">
-            </app-img-zoom>
-        </div>
-
-        
-       
-
-    </div> -->
 
     <div class="hr-center mt-5">
         <hr>
     </div>
-    <!-- <div class="row">
-        <div class="col-sm-12">
-            <h2 class="display-4">{{'home_something_special' | translate}}</h2>
-        </div>
-    </div> -->
 
     <div class="row">
         <div class="col-sm-12">
             <h2 class="display-4">{{home.videoTitle}}</h2>
         </div>
     </div>
-
     <div class="row">
-        <div class="col-sm-12 ">
-            <div class="videoWrapper" [innerHTML]="home.videoScript" ></div>
-        </div>
+        <div class="ratio ratio-16x9" [innerHTML]="home.videoScript"></div>
     </div>
-
     <div class="hr-center mt-5">
         <hr>
     </div>
@@ -246,23 +124,24 @@
     </div>
 
     <div class="row mt-5">
-        <app-destination-img title="{{company.Specialism}}" content="{{company.SpecialismContent}}" btncontent="{{'home_img_more' | translate}}"
-         [imgURL]="company.SpecialismImage"> </app-destination-img>
+        <app-destination-img title="{{company.Specialism}}" content="{{company.SpecialismContent}}"
+            btncontent="{{'home_img_more' | translate}}" [imgURL]="company.SpecialismImage"> </app-destination-img>
     </div>
 
     <div class="row mt-5">
-        <app-destination-img title="{{company.PersonalService}}" content="{{company.PersonalServiceContent}}" btncontent="{{'home_img_more' | translate}}"
-         [imgURL]="company.PersonalServiceImage"> </app-destination-img>
+        <app-destination-img title="{{company.PersonalService}}" content="{{company.PersonalServiceContent}}"
+            btncontent="{{'home_img_more' | translate}}" [imgURL]="company.PersonalServiceImage"> </app-destination-img>
     </div>
 
     <div class="row mt-5">
-        <app-destination-img title="{{company.CustomizeTour}}" content="{{company.CustomizeTourContent}}" btncontent="{{'home_img_more' | translate}}" 
-        [imgURL]="company.CustomizeTourImage"> </app-destination-img>
+        <app-destination-img title="{{company.CustomizeTour}}" content="{{company.CustomizeTourContent}}"
+            btncontent="{{'home_img_more' | translate}}" [imgURL]="company.CustomizeTourImage"> </app-destination-img>
     </div>
 
     <div class="row mt-5">
-        <app-destination-img title="{{company.ResponsibleTravel}}" content="{{company.ResponsibleTravelContent}}" btncontent="{{'home_img_more' | translate}}"
-         [imgURL]="company.ResponsibleTravelImage"> </app-destination-img>
+        <app-destination-img title="{{company.ResponsibleTravel}}" content="{{company.ResponsibleTravelContent}}"
+            btncontent="{{'home_img_more' | translate}}" [imgURL]="company.ResponsibleTravelImage">
+        </app-destination-img>
     </div>
 
     <div class="row mt-5">
@@ -276,4 +155,3 @@
     </div>
 
 </div>
-

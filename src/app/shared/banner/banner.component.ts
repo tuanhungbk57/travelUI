@@ -9,6 +9,11 @@ import { Homepage } from 'src/app/homepage/model/homepage';
 export class BannerComponent implements OnInit {
 
   constructor() { }
+ 
+   _apiResponse: string = "";
+  @Input() text = '';
+
+  @Input() home: Homepage = new Homepage();
   @Input() 
   get imgURL(): any {return this._apiResponse;}
   set imgURL(value: any) {
@@ -21,10 +26,7 @@ export class BannerComponent implements OnInit {
     // do whatever else you want to do here
   }
   backgroundStyle = {'background': 'url('+this.imgURL+')'}
-  private _apiResponse: string = "";
-  @Input() text = '';
 
-  @Input() home: Homepage = new Homepage();
 
   ngOnInit(): void {
   }
