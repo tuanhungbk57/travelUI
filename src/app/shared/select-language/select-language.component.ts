@@ -4,7 +4,8 @@ import * as nth from 'src/app/common/util'
 @Component({
   selector: 'app-select-language',
   template: `
-  <select #langSelect (change)="changedLanguage(langSelect.value)">
+  <span>Language: </span>
+  <select style="background-color:#c49651" #langSelect (change)="changedLanguage(langSelect.value)">
   <option
     *ngFor="let lang of a.langs"
     [value]="lang"
@@ -13,6 +14,7 @@ import * as nth from 'src/app/common/util'
 </select>
   `,
   styles: [
+    
   ]
 })
 export class SelectLanguageComponent implements OnInit {

@@ -35,6 +35,29 @@
             </a>
           </li>
           <hr>
+          <li [ngClass]="{'active': true}" (click)="toggleSidebar(!sidebarservice.toggled)">
+            <a [routerLink]="['/blog']" (click)='toggle("x")'>
+              <span>{{'menu_blog' | translate}}</span>
+            </a>
+          </li>
+          <hr>
+
+          <li  (click)="toggleSidebar(!sidebarservice.toggled)" style="  margin: 30px auto; width: 20%; display: flex; justify-content: center;">
+            <a href="https://www.facebook.com/Global-Prestige-Travel-105336845542748" (click)='toggle("x")'>
+             <img src="assets/images/icon-facebook.svgz" alt="">
+            </a>
+            <a href="" (click)='toggle("x")'>
+              <img src="assets/images/icon-instagram.svgz" alt="">
+             </a>
+             <a href="https://www.youtube.com/channel/UCiCgjffDJTgYrPSejVnCn1w" (click)='toggle("x")'>
+              <img src="assets/images/icon-youtube.svgz" alt="">
+             </a>
+          </li>
+          <hr>
+          <li  [ngClass]="{'active': true, 'py-5': true}" >
+            <app-select-language></app-select-language>
+          </li>
+          
           <!-- <li [ngClass]="{'active': true}">
             <a href="/services" (click)='toggle("x")'>
               <span>{{'menu_contact' | translate}}</span>

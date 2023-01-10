@@ -11,6 +11,7 @@ import { SupportBannerComponent } from './support-banner/support-banner.componen
 import { ImgBoxComponent } from './img-box/img-box.component';
 import { RouterModule } from '@angular/router';
 import { ImgRBoxComponent } from './img-r-box/img-r-box.component';
+import { FooterService } from '../service/footer.service';
 
 
 
@@ -42,6 +43,7 @@ import { ImgRBoxComponent } from './img-r-box/img-r-box.component';
     SupportBannerComponent,
     ImgRBoxComponent,
     I18nModule
-  ]
+  ],
+  providers:[FooterService]
 })
 export class SharedModule { }

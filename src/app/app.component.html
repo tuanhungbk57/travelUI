@@ -5,6 +5,7 @@
     <main class="page-content">
         <div class="container-fluid">
             <a [routerLink]="['/service-contact/communication']" class="contact-button sticky-button" title="liên lạc"></a>
+            <a class="whatsapp sticky-button" href="https://api.whatsapp.com/send?phone={{company.Phone}}" title="Click to connect {{company.Phone}}"></a>
             <router-outlet></router-outlet>
             
             <div class="mt-5">
@@ -12,8 +13,10 @@
                     [worktime]="company.WorkTime"></app-support-banner>
             </div>
         </div>
+        
+
     </main>
-    <app-footer></app-footer>
+    <app-footer [companyName]="companyName" [address]="address" [phone]="phone" [ceo]="ceo" [email]="email"></app-footer>
 
 
 

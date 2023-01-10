@@ -6,9 +6,9 @@ import { BaseService } from './base.service';
 @Injectable({
   providedIn: 'root'
 })
-export class DestinationService extends BaseService {
+export class BlogService extends BaseService {
 
-  url = this.domain + 'api/web/Destinations';
+  url = this.domain + 'api/web/Blog';
   lang = this.getCurrentLang();
   constructor(http: HttpClient) {
     super(http);
@@ -16,10 +16,10 @@ export class DestinationService extends BaseService {
 
 
   /**
-   * Lấy về danh sách các điểm đến
+   * Lấy về danh sách các blog
    *
    * @returns {Observable<any>}
-   * @memberof DestinationService
+   * @memberof BlogService
    */
   getList(): Observable<any> {
     return this.http.get(`${this.url}/${this.lang}/lang`);
@@ -28,10 +28,4 @@ export class DestinationService extends BaseService {
   getByPath(path: string): Observable<any> {
     return this.http.get(`${this.url}/${path}/${this.lang}`);
   }
-
-  getSpecialList(): Observable<any> {
-    return this.http.get(`${this.url}/${this.lang}/special/lang`);
-  }
-
-  
 }

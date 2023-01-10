@@ -2,79 +2,56 @@
     <div class="row mt-5">
         <div class="col-md-3 col-sm-12">
             <div class="row">
-                <h4>{{'footer_title1'| translate}} </h4>
+                <h4>{{companyName}}</h4>
             </div>
             <div class="row">
-                <div>{{'footer_col1_manager' | translate}}</div>
+                <div>CEO: {{ceo}}</div>
             </div>
             <div class="row">
-                <div>{{'footer_col1_address' | translate}}</div>
+                <address>{{address}}</address>
             </div>
             <div class="row">
-                <div>{{'footer_col1_phone_key' | translate}}{{'footer_col1_phone_value' | translate}}</div>
+                <div>Phone: <a href="tel:+{{phone}}"> {{phone}}</a></div>
             </div>
             <div class="row">
-                <div>{{'footer_col1_fax' | translate}}</div>
-            </div>
-            <div class="row">
-                <div>{{'footer_col1_email_key' | translate}}{{'footer_col1_email_value' | translate}}</div>
+                <div>Email: <a href="mailto:{{email}}">{{email}}</a></div>
             </div>
         </div>
         <div class="col-md-3 col-sm-12">
             <div class="row">
-                <h4>{{'footer_title2'| translate}} </h4>
+                <h4>{{footer?.LabelColumn2}} </h4>
             </div>
-            <div class="row">
-                <a>{{'footer_col2_Press_key' | translate}}</a>
+            <div class="row" *ngFor="let item of footer?.Column2">
+                <a href="{{item.link}}">{{item.label}}</a>
             </div>
-            <div class="row">
-                <a>{{'footer_col2_Career_key' | translate}}</a>
-            </div>
-            <div class="row">
-                <a>{{'footer_col2_Destination_key' | translate}}</a>
-            </div>
-            <div class="row">
-                <a>{{'footer_col2_Service_key' | translate}}</a>
-            </div>
-            <div class="row">
-                <a>{{'footer_col2_Booking_key' | translate}}</a>
-            </div>
-            <div class="row">
-                <a>{{'footer_col2_Impressum_key' | translate}}</a>
-            </div>
-            <div class="row">
-                <a>{{'footer_col2_Policy_key' | translate}}</a>
-            </div>
+            
         </div>
         <div class="col-md-3 col-sm-12">
             <div class="row">
-                <h4>{{'footer_title3'| translate}} </h4>
+                <h4>{{footer?.LabelColumn3}}</h4>
             </div>
             <div class="row">
-                <div>{{'footer_col3_NewsLetter_content' | translate}}</div>
+                <div>{{footer?.NewsColumn3}}</div>
             </div>
-            <div class="row">
-                <button type="button" class="btn btn-warning">{{'footer_col3_button_content' | translate}}</button>
+            <div class="row py-2">
+                <button type="button" class="btn" style="background-color: #c49651;">
+                    <a class="button" style="text-decoration:none;" [routerLink]="['/service-contact/newsletters']">
+                        {{footer?.Column3}}
+                    </a>
+                    </button>
             </div>
-            <div class="row">
+            <div class="row py-2">
                 <app-select-language></app-select-language>
             </div>
 
         </div>
         <div class="col-md-3 col-sm-12">
             <div class="row">
-                <h4>{{'footer_title4'| translate}} </h4>
+                <h4>{{footer?.LabelColumn4}} </h4>
             </div>
-            <div class="row">
-                <div>{{'Bhutan_key' | translate}}{{'Bhutan_link' | translate}}</div>
+            <div class="row" *ngFor="let item of footer?.Column4">
+                <a href="{{item.link}}">{{item.label}}</a>
             </div>
-            <div class="row">
-                <div>{{'China_key' | translate}}{{'China_link' | translate}}</div>
-            </div>
-            <div class="row">
-                <div>{{'India_key' | translate}}{{'India_link' | translate}}</div>
-            </div>
-            
         </div>
 
     </div>

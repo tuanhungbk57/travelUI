@@ -57,7 +57,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  padding: 3px 10px
+  padding: 3px 10px;
+  z-index: 10;
 }
 
 .contact-button {
@@ -69,6 +70,17 @@
   z-index: 9010;
   background: url(/assets/images/icons/icon-contact-button-white.svgz) no-repeat center center #c49651;
   background-size: 65%;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 2%;
+  right: 10px;
+  width: 70px;
+  height: 70px;
+  z-index: 9010;
+  background: url(/assets/images/icons/whatsapp_final.png) no-repeat center center ;
+  
 }
 
 @media (min-width: 1220px) {

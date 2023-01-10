@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path:'blog',
-    loadChildren:() =>import('./service-contact/service-contact.module').then(m =>m.ServiceContactModule)
+    loadChildren:() =>import('./blog/blog.module').then(m =>m.BlogModule)
   },
   {
     path: '',

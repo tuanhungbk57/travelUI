@@ -1,0 +1,22 @@
+<app-banner [imgURL]="blog?.BannerImage" text="{{blog?.BlogName}}"></app-banner>
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+            <app-img-box text="{{blogDetail?.BlogPostName}}" textTarget="{{'blog_btn_view_detail' | translate}}"
+            [imgURL]="blogDetail?.ImageURL" [quickView]="blogDetail?.QuickView"
+            [URLTarget]="blogDetail?.BlogDetailURL">
+            </app-img-box>
+        </div>
+    </div>
+
+    <div class="row mt-3" *ngFor="let arr of blogDetails">
+        <div class="col-md-4 col-sm-12 pe-0" *ngFor="let subdest of arr">
+            <app-img-box  text="{{subdest.BlogPostName}}" [URLTarget]="subdest.BlogDetailURL" textTarget="{{'blog_btn_view_detail' | translate}}" [quickView]="subdest?.QuickView"
+            [imgURL]="subdest.ImageURL">
+        </app-img-box>
+        </div>
+    </div>
+</div>
+
+

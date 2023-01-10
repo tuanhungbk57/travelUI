@@ -23,10 +23,11 @@ export class TourComponent implements OnInit {
  /**
    * Lấy về chi tiết 1 điểm đến và hiển thị lên giao diện
    *
-   * @memberof DestinationPageComponent
+   * @memberof TourComponent
    */
   getDetail(){
-    this.tourService.getByPath(this.path).subscribe((data: any) =>{
+    let fullPath = this.tourService.getFullPath();
+    this.tourService.getByPath(fullPath[2], fullPath[3],this.path).subscribe((data: any) =>{
       this.tour = data;
       this.tourcontent = JSON.parse( data?.Content);
     })

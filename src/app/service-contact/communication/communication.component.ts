@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Contact } from '../model/contact';
 import { CommunicationService } from '../service/communication.service';
 import { ContactService } from '../service/contact.service';
@@ -21,7 +22,7 @@ export class CommunicationComponent implements OnInit {
   contact: Contact = new Contact(); 
   com: any;
   isInvalid = false;
-  constructor(public contactService: ContactService, public comService: CommunicationService) { }
+  constructor(public contactService: ContactService, public comService: CommunicationService,  public translate: TranslateService) { }
 
   ngOnInit(): void {
     this.getContent();

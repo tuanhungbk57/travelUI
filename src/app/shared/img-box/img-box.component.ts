@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ImgBoxComponent implements OnInit {
   @Input() imgURL = '';
   @Input() text = '';
+  @Input() quickView = '';
   @Input() textTarget = '';
   @Input() URLTarget = '';
 

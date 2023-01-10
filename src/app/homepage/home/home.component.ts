@@ -11,40 +11,50 @@ import { Homepage } from '../model/homepage';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'] 
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
 
-  constructor(public translate: TranslateService, public companyService: CompanyService, 
+  constructor(public translate: TranslateService, public companyService: CompanyService,
     public homeService: HomepageService, public destinationService: DestinationService, private sanitizer: DomSanitizer) { }
   home: Homepage = new Homepage();
   company: Company = new Company();
   dests: any[] = [];
+  specialDests: any[] = [];
 
   ngOnInit(): void {
     this.getHomeInfo();
     this.getCompanyInfo();
     this.getDestList();
+    this.getSpecialDestList();
   }
 
-  getHomeInfo(){
-    this.homeService.getInfo().subscribe((data: any) =>{
+  videoScript: string = "";
+  getHomeInfo() {
+    this.homeService.getInfo().subscribe((data: any) => {
       this.home = data;
+      this.videoScript = this.home.videoScript;
       this.home.videoScript = this.sanitizer.bypassSecurityTrustHtml(this.home.videoScript);
     })
   }
 
-  getCompanyInfo(){
-    this.companyService.getCompanyInfo().subscribe((data:any) =>{
+  getCompanyInfo() {
+    this.companyService.getCompanyInfo().subscribe((data: any) => {
       this.company = data;
     })
   }
 
-  getDestList(){
-    this.destinationService.getList().subscribe((data: any)=>{
+  getDestList() {
+    this.destinationService.getList().subscribe((data: any) => {
       this.dests = this.destinationService.splitArrayIntoChunks(data, 3);
     })
   }
-  
+
+  getSpecialDestList() {
+    this.destinationService.getSpecialList().subscribe((data: any) => {
+      this.specialDests = this.destinationService.splitArrayIntoChunks(data, 3);
+    })
+  }
+
 
 }

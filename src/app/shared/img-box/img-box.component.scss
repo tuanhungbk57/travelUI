@@ -34,13 +34,11 @@ figure {
 }
 
 .text-box {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     padding: 25px;
     width: 90%;
     background: white;
-    bottom: -6%;
+    margin: -50px auto 0;
 }
 
 a.button {
@@ -48,7 +46,7 @@ a.button {
     padding: 6px 20px 11px;;
     border: 2px solid #c49651;
     background: white;
-    color: #c49651;
+    color: #c49651 !important;
 }
 
 a.button:hover {

@@ -1,11 +1,19 @@
 <div class="hover01 column img-main">
     <div class="text-center">
       <figure><img class="img-fluid" src="{{imgURL}}" />
-        <span class="centered">{{text}}</span>
+        <!-- <span class="centered">{{text}}</span> -->
+        
         <div class="text-box">
-            <a class="button" href="{{URLTarget}}">{{textTarget}}</a>
+          <h3 style="text-align: center;">
+            {{text}}
+          </h3>
+          <div style="text-align: center; margin-top: 10px; margin-bottom: 20px; color: black;">
+            {{quickView}}
+          </div>
+            <a class="button"  routerLink="{{URLTarget}}">{{textTarget}}</a>
+           
         </div>
       </figure>
-      <div style="padding: 30px;"></div>
+      
     </div>
   </div>

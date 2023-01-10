@@ -24,7 +24,11 @@ export class TourService extends BaseService {
     return this.http.get(`${this.url}/${trip}/trip/${this.lang}/lang`);
   }
 
-  getByPath(path: string): Observable<any> {
-    return this.http.get(`${this.url}/${path}/${this.lang}`);
+  getByPath(desPath: string, tripPath: string, path: string): Observable<any> {
+    return this.http.get(`${this.url}/${desPath}/${tripPath}/${path}/${this.lang}`);
+  }
+
+  getFullPath(){
+    return location.pathname.split("/");
   }
 }

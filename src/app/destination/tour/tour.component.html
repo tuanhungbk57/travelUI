@@ -2,10 +2,11 @@
 <div  class="container py-5 text-center">
     <div class="row">
         <div class="col-sm-12">
-            <p class="display-4">{{tour?.QuickViewContent}}</p>
+            <p class="display-6">{{tour?.QuickViewContent}}</p>
         </div>
     </div>
     <div class="row mt-4" *ngFor="let item of tourcontent; let i=index">
+<!--         
         <ng-container *ngIf="i %2 == 1; else elseTemplate">
             <div class="col-md-6 col-sm-12">
                 <img class="img-fluid"
@@ -14,16 +15,16 @@
             </div>
             <div class="col-md-6 col-sm-12">
                 <h5>{{item.title}}</h5>
-                <p>
-                    {{item.content}}
+                <p style="text-align: left;">
+                    <span class="new-line" [innerHTML]="item.content"></span>
                 </p>
             </div>
         </ng-container>
         <ng-template #elseTemplate>
             <div class="col-md-6 col-sm-12">
                 <h5>{{item.title}}</h5>
-                <p>
-                    {{item.content}}
+                <p  style="text-align: left;">
+                    <span class="new-line" [innerHTML]="item.content"></span>
                 </p>
             </div>
             <div class="col-md-6 col-sm-12">
@@ -33,6 +34,18 @@
             </div>
            
         </ng-template>
-        
+         -->
+         <div class="col-md-7 col-sm-12">
+            <h5>{{item.title}}</h5>
+            <p style="text-align: justify;">
+                <span class="new-line" [innerHTML]="item.content"></span>
+            </p>
+           
+        </div>
+        <div class="col-md-5 col-sm-12">
+            <img class="img-fluid"
+            src="{{item.imgURL}}"
+            alt="" srcset="">
+        </div>
     </div>
 </div>
